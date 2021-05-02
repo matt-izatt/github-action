@@ -1,0 +1,24 @@
+{
+  "name": "github-action",
+  "version": "1.0.0",
+  "description": "A test github action",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-izatt/github-action.git"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "ci"
+  ],
+  "author": "Matt Izatt <matt.izatt@hotmail.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matt-izatt/github-action/issues"
+  },
+  "homepage": "https://github.com/matt-izatt/github-action#readme"
+}
