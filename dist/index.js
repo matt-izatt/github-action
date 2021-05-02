@@ -6056,7 +6056,7 @@ try {
     }
     const pull_request_number = context.payload.pull_request.number;
 
-    const octokit = new github.GitHub(github_token);
+    const octokit = new github.getOctokit(github_token);
     octokit.issues.createComment({
         ...context.repo,
         issue_number: pull_request_number,
