@@ -1,0 +1,13 @@
+name: 'MI Test Action'
+description: 'This action prints a comment on a pull request'
+inputs:
+  message:
+    description: 'Body of the comment'
+    required: true
+    default: 'Hello World'
+  GITHUB_TOKEN:
+    description: 'Github token of the repository (automatically created by Github)'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
