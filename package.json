@@ -24,7 +24,8 @@
   "homepage": "https://github.com/matt-izatt/github-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.7",
-    "@actions/github": "^4.0.0"
+    "@actions/github": "^4.0.0",
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "@types/node": "^15.0.1"
