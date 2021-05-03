@@ -65,7 +65,7 @@ function run() {
                 }
                 instance = axios_1["default"].create({
                     baseURL: 'https://botz.learn-dev.uk',
-                    timeout: 1000
+                    timeout: 5000
                 });
                 instance.post('/pr', {
                     "owner": "matt-izatt",
