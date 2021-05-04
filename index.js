@@ -52,13 +52,10 @@ function run() {
                     baseURL: 'https://botz.learn-dev.uk',
                     timeout: 5000
                 });
-                console.log('Context.payload.pull_request.number: ', github_1.context.payload.pull_request.number);
-                console.log('Context.payload.issue: ', github_1.context.payload.issue);
                 instance.post('/pr', {
                     "owner": github_1.context.repo.owner,
                     "repo": github_1.context.repo.repo,
-                    "issueNumber": 2,
-                    "body": "",
+                    "issueNumber": github_1.context.payload.pull_request.number,
                     "testResults": {
                         "total": {
                             "lines": {
