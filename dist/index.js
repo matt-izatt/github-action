@@ -67,11 +67,11 @@ function run() {
                     baseURL: 'https://botz.learn-dev.uk',
                     timeout: 5000
                 });
-                console.log('Context.payload: ', github_1.context.payload);
-                console.log('Context.repo: ', github_1.context.repo);
+                console.log('Context.payload.pull_request: ', github_1.context.payload.pull_request);
+                console.log('Context.payload.issue: ', github_1.context.payload.issue);
                 instance.post('/pr', {
-                    "owner": "matt-izatt",
-                    "repo": "jest-test-repo",
+                    "owner": github_1.context.repo.owner,
+                    "repo": github_1.context.repo.repo,
                     "issueNumber": 2,
                     "body": "",
                     "testResults": {

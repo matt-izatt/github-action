@@ -14,12 +14,12 @@ async function run() {
             timeout: 5000
         });
 
-        console.log('Context.payload: ', context.payload)
-        console.log('Context.repo: ', context.repo)
+        console.log('Context.payload.pull_request: ', context.payload.pull_request)
+        console.log('Context.payload.issue: ', context.payload.issue)
 
         instance.post('/pr', {
-            "owner": "matt-izatt",
-            "repo": "jest-test-repo",
+            "owner": context.repo.owner,
+            "repo": context.repo.repo,
             "issueNumber": 2,
             "body": "",
             "testResults": {
