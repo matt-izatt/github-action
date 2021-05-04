@@ -14,6 +14,9 @@ async function run() {
             timeout: 5000
         });
 
+        console.log('Context.payload: ', context.payload)
+        console.log('Context.repo: ', context.repo)
+
         instance.post('/pr', {
             "owner": "matt-izatt",
             "repo": "jest-test-repo",
@@ -74,10 +77,10 @@ async function run() {
                 }
             }
         })
-            .then(function (response) {
-                console.log(response);
+            .then(() => {
+                console.log('Success');
             })
-            .catch(function (error) {
+            .catch(error => {
                 console.log(error);
             });
 

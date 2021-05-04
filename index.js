@@ -52,6 +52,8 @@ function run() {
                     baseURL: 'https://botz.learn-dev.uk',
                     timeout: 5000
                 });
+                console.log('Context.payload: ', github_1.context.payload);
+                console.log('Context.repo: ', github_1.context.repo);
                 instance.post('/pr', {
                     "owner": "matt-izatt",
                     "repo": "jest-test-repo",
@@ -112,8 +114,8 @@ function run() {
                         }
                     }
                 })
-                    .then(function (response) {
-                    console.log(response);
+                    .then(function () {
+                    console.log('Success');
                 })["catch"](function (error) {
                     console.log(error);
                 });
